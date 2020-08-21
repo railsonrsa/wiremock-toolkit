@@ -31,7 +31,7 @@ Program
 
     initReloader({ port: wiremockPort, dataDir: wiremockDataDir })
     Spawn('java',
-      ['-jar', `${__dirname}/wiremock/wiremock.jar`, `--root-dir=${wiremockDataDir}`, `--port=${wiremockPort}`, '--verbose'],
+      ['-jar', `${__dirname}/wiremock/wiremock-standalone-2.27.0.jar`, `--root-dir=${wiremockDataDir}`, `--port=${wiremockPort}`, '--verbose'],
       SHELL_OPTIONS)
   })
 
@@ -46,7 +46,7 @@ Program
 
     initReloader({ port: wiremockPort, dataDir: wiremockDataDir })
     Spawn('java',
-      ['-jar', `${__dirname}/wiremock/wiremock.jar`, `--root-dir=${wiremockDataDir}`, `--port=${wiremockPort}`, '--verbose', `--proxy-all=${Config.wiremock.proxyTo}`],
+      ['-jar', `${__dirname}/wiremock/wiremock-standalone-2.27.0.jar`, `--root-dir=${wiremockDataDir}`, `--port=${wiremockPort}`, '--verbose', `--proxy-all=${Config.wiremock.proxyTo}`],
       SHELL_OPTIONS)
   })
 
